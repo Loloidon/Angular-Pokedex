@@ -1,0 +1,32 @@
+
+  <img src="../../assets/pokedex.png" alt="Pokedex Screen">
+
+<div *ngIf="pokemonResult">
+    <h2>Liste des Pokémon</h2>
+    <ul>
+      <li *ngFor="let pokemon of pokemonResult.results">
+        <p>{{ pokemon.name }}</p>
+        <img [src]="pokemon.sprite">
+    
+      </li>
+    </ul>
+  </div>
+  
+  <button (click)="getPrevious()">Pokemon-precedents</button>
+  <button (click)="getNext()">Pokemon-suivants</button>
+  
+  <div *ngIf="error">
+    <p>Une erreur s'est produite : {{ error }}</p>
+  </div>
+  <div class="pokedex">
+    <div class="screen">
+      <img src="../../assets/pokedex.png" alt="Pokedex Screen">
+    </div>
+    <div class="buttons">
+      <button class="button red"></button>
+      <button class="button yellow"></button>
+      <button class="button green"></button>
+      <button class="button blue"></button>
+    </div>
+  </div>
+  

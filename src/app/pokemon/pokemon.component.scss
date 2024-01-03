@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .pokedex {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .screen {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .screen img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .red {
+    background-color: #ff4d4d;
+  }
+  
+  .yellow {
+    background-color: #ffd633;
+  }
+  
+  .green {
+    background-color: #4dff4d;
+  }
+  
+  .blue {
+    background-color: #4d4dff;
+  }
