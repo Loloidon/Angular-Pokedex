@@ -9,7 +9,7 @@ import { count, map } from 'rxjs/operators';
 })
 export class PokemonService {
   private offset=0;
-  private limit=20;
+  private limit=9;
   private cpt=0;
   constructor(private http: HttpClient) { }
 

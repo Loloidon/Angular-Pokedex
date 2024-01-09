@@ -20,7 +20,7 @@ export class PokemonComponent {
     private http: HttpClient) { }
 
   ngOnInit() {
-    this.getMany('https://pokeapi.co/api/v2/pokemon');
+    this.getMany('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=9}');
 }
 
 getMany(url:string){

@@ -1,32 +1,46 @@
 
-  <img src="../../assets/pokedex.png" alt="Pokedex Screen">
-
-<div *ngIf="pokemonResult">
-    <h2>Liste des Pokémon</h2>
-    <ul>
-      <li *ngFor="let pokemon of pokemonResult.results">
-        <p>{{ pokemon.name }}</p>
-        <img [src]="pokemon.sprite">
-    
-      </li>
-    </ul>
-  </div>
-  
-  <button (click)="getPrevious()">Pokemon-precedents</button>
-  <button (click)="getNext()">Pokemon-suivants</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
   
   <div *ngIf="error">
     <p>Une erreur s'est produite : {{ error }}</p>
   </div>
-  <div class="pokedex">
-    <div class="screen">
-      <img src="../../assets/pokedex.png" alt="Pokedex Screen">
-    </div>
-    <div class="buttons">
-      <button class="button red"></button>
-      <button class="button yellow"></button>
-      <button class="button green"></button>
-      <button class="button blue"></button>
-    </div>
+  
+  <div class="white">
+    
   </div>
+  <div class="screen">
+    <img src="../../assets/Pokedex.png" alt="Pokedex Screen">
+    <div class="green">
+      <div *ngIf="pokemonResult">
+          
+        <ul>
+          <li *ngFor="let pokemon of pokemonResult.results">
+          <p>{{ pokemon.name }}</p>
+          <!-- <img [src]="pokemon.sprite"> -->
+          
+          </li>
+        </ul>
+    </div>
+        
+      <button (click)="getPrevious()">⇦</button>
+      <button (click)="getNext()">⇨</button>
+      
+  </div>
+</div>
+     
+    
+  
+</body>
+</html>
+
   

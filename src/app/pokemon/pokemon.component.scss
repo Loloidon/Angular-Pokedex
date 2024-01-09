@@ -1,57 +1,59 @@
 body {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    text-align: center;
     margin: 0;
-    background-color: #f0f0f0;
+    
+  }
+  ul,ol{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    text-transform: capitalize;
+    font-family: 'DotGothic16', sans-serif;
+  }
+  .white{
+    width: 330px;
+    height: 335px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    display: block;
+    left: 470px;
+    z-index: 4;
+    background-color: rgb(255, 255, 255);
+    top: 182px;
+  }
+  .green{
+    width: 300px;
+    height: 373px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(62, 172, 62);
+    position: absolute;
+    display: block;
+    left: 904px;
+    top: 187px;
+    z-index: 5;
+    border-radius: 5px;
+    list-style: none;
+    text-align: center;
   }
   
-  .pokedex {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 300px;
-  }
   
   .screen {
     padding: 20px;
     text-align: center;
+    z-index: 2;
+    
   }
-  
+
   .screen img {
-    max-width: 100%;
+    max-width: 400%;
     height: auto;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-  }
-  
-  .button {
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .red {
-    background-color: #ff4d4d;
-  }
-  
-  .yellow {
-    background-color: #ffd633;
-  }
-  
-  .green {
-    background-color: #4dff4d;
-  }
-  
-  .blue {
-    background-color: #4d4dff;
-  }
+    display: flexbox;
+    box-shadow: 2px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;  }
+
