@@ -11,32 +11,34 @@
 </head>
 <body>
   
-  <div *ngIf="error">
-    <p>Une erreur s'est produite : {{ error }}</p>
-  </div>
-  
   <div class="white">
-    
+    <ul>
+      <li *ngFor="let pokemon of pokemonResult?.results" (click)="showOnePokemonSprite(pokemon)">
+        <!-- Utilisez ngIf pour conditionnellement afficher le sprite -->
+        <div class="sprite">
+        <img *ngIf="selectedPokemon === pokemon" [src]="pokemon.sprite" alt="{{ pokemon.name }} Sprite">
+        <ul>
+          <li *ngIf="selectedPokemon === pokemon">{{pokemon.name}}</li>
+        </ul>
+        </div>
+      </li>
+    </ul>
   </div>
   <div class="screen">
     <img src="../../assets/Pokedex.png" alt="Pokedex Screen">
     <div class="green">
       <div *ngIf="pokemonResult">
-          
         <ul>
           <li *ngFor="let pokemon of pokemonResult.results">
-          <p>{{ pokemon.name }}</p>
-          <!-- <img [src]="pokemon.sprite"> -->
-          
+            <p (click)="showOnePokemonSprite(pokemon)">{{ pokemon.name }}</p>
           </li>
         </ul>
-    </div>
-        
+      </div>
       <button (click)="getPrevious()">⇦</button>
       <button (click)="getNext()">⇨</button>
-      
+    </div>
   </div>
-</div>
+  
      
     
   

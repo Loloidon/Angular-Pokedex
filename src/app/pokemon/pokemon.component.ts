@@ -22,7 +22,11 @@ export class PokemonComponent {
   ngOnInit() {
     this.getMany('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=9}');
 }
+selectedPokemon: { name: string, sprite: string } | null = null;
 
+showOnePokemonSprite(pokemon: { name: string, sprite: string }): void {
+  this.selectedPokemon = pokemon;
+}
 getMany(url:string){
   this.pokemonService.getData(url).subscribe(
       (data) => {
