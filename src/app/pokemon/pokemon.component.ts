@@ -37,6 +37,12 @@ getMany(url:string){
           this.http.get<any>(pokemon.url).subscribe({
             next:(p)=>{
               pokemon.sprite = p.sprites.front_default
+              pokemon.PV = p.stats[0].base_stat;
+              pokemon.ATK = p.stats[1].base_stat;
+              pokemon.DEF = p.stats[2].base_stat;
+              pokemon.ATKSPE = p.stats[3].base_stat;
+              pokemon.DEFSPE = p.stats[4].base_stat;
+              pokemon.SPEED = p.stats[5].base_stat;     
             }
           })
         }

@@ -14,11 +14,29 @@
   <div class="white">
     <ul>
       <li *ngFor="let pokemon of pokemonResult?.results" (click)="showOnePokemonSprite(pokemon)">
-        <!-- Utilisez ngIf pour conditionnellement afficher le sprite -->
+        
         <div class="sprite">
         <img *ngIf="selectedPokemon === pokemon" [src]="pokemon.sprite" alt="{{ pokemon.name }} Sprite">
         <ul>
           <li *ngIf="selectedPokemon === pokemon">{{pokemon.name}}</li>
+        </ul>
+        <ul>
+          <li *ngIf="selectedPokemon === pokemon">PV:{{pokemon.PV}}</li>
+        </ul>
+        <ul>
+          <li *ngIf="selectedPokemon === pokemon">ATK:{{pokemon.ATK}}</li>
+        </ul>
+        <ul>
+          <li *ngIf="selectedPokemon === pokemon">DEF:{{pokemon.DEF}}</li>
+        </ul>
+        <ul>
+          <li *ngIf="selectedPokemon === pokemon">ATKSPE:{{pokemon.ATKSPE}}</li>
+        </ul>
+        <ul>
+          <li *ngIf="selectedPokemon === pokemon">DEFSPE:{{pokemon.DEFSPE}}</li>
+        </ul>
+        <ul>
+          <li *ngIf="selectedPokemon === pokemon">SPEED:{{pokemon.SPEED}}</li>
         </ul>
         </div>
       </li>
